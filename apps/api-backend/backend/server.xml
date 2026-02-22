@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="API Backend - Open Liberty">
+
+    <featureManager>
+        <feature>springBoot-3.0</feature>
+        <feature>servlet-6.0</feature>
+        <feature>monitor-1.0</feature>
+        <feature>mpTelemetry-1.1</feature>
+        <feature>transportSecurity-1.0</feature>
+    </featureManager>
+
+    <!-- HTTP/HTTPS endpoints -->
+    <httpEndpoint id="defaultHttpEndpoint"
+                  host="*"
+                  httpPort="${default.http.port}"
+                  httpsPort="${default.https.port}" />
+
+    <!-- Spring Boot application -->
+    <springBootApplication id="api-backend"
+                           location="${app.location}"
+                           name="api-backend" />
+
+    <!-- Modular config includes -->
+    <include location="telemetry.xml" />
+    <include location="logging.xml" />
+
+</server>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server>
+    <!--
+        MicroProfile Telemetry 1.1 → OpenTelemetry context propagation.
+        The OTLP exporter endpoint is injected via env / bootstrap props.
+    -->
+    <mpTelemetry
+            otel.service.name="api-backend"
+            otel.sdk.disabled="false"
+            otel.exporter.otlp.endpoint="${otel.exporter.otlp.endpoint:http://localhost:4317}"
+            otel.exporter.otlp.protocol="grpc"
+            otel.propagators="tracecontext,baggage" />
+</server>
