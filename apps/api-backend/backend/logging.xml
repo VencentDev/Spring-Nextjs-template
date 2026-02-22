@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server>
+    <!--
+        Liberty logging — structured JSON compatible with Grafana Loki.
+        Logback (logstash-logback-encoder) handles application log formatting;
+        this config covers the Liberty server log layer.
+    -->
+    <logging
+            consoleFormat="json"
+            consoleLogLevel="INFO"
+            isoDateFormat="true"
+            traceSpecification="*=info" />
+</server>
