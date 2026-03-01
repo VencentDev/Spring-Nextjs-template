@@ -25,7 +25,7 @@ A production-grade, cloud-native template designed for high-velocity teams. This
 ```text
 ├── apps/
 │   ├── api-backend/      # Spring Boot 3.4 + Open Liberty
-│   └── web-frontend/     # React 19 + Next.js (Vite)
+│   └── web-frontend/     # Nextjs
 ├── libs/
 │   ├── shared-dtos/      # Shared Java Records & TS Definitions
 │   └── ui-core/          # Shared Tailwind v4 + Shadcn/UI
